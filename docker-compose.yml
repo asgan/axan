@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  axan:
+    build:
+      context: .
+      dockerfile: axan.Dockerfile
+      target: development
+    image: asgan/axan:latest
+    volumes:
+    - .:/code
+    stdin_open: true
+    tty: true
+    command: ./axan.io
